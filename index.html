@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="km"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>អាពាហ៍ពិពាហ៍ · យ៉ុម សំណាង &amp; ឃុន នារី</title>
+<link href="https://fonts.googleapis.com/css2?family=Moul&family=Moulpali&family=Kantumruy+Pro:wght@300;400;600&family=Cormorant+Garamond:ital,wght@0,400;1,400&family=Pinyon+Script&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#6e1f27;--paper2:#2b0b10;--cream:#f6eedd;--ink:#12060a;
+--foil:linear-gradient(115deg,#9c7124 0%,#d9b15a 30%,#fbefc0 46%,#d9b15a 62%,#9c7124 100%);
+--grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .07 0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
+*{box-sizing:border-box;margin:0}
+html,body{height:100%;background:var(--ink);color:var(--cream);font-family:'Kantumruy Pro',sans-serif;overflow-x:hidden}
+.kh{line-height:1.9}
+.foil{background:var(--foil);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;padding:.3em .2em .2em;display:inline-block}
+#intro{position:fixed;inset:0;height:100svh;display:grid;place-items:center;z-index:20;background:radial-gradient(ellipse at 50% 35%,#4a1620,#14070b 70%);overflow:hidden}
+#intro:before{content:"";position:absolute;inset:0;background:var(--grain);opacity:.8}
+#head{position:absolute;top:calc(env(safe-area-inset-top,0px) + 4svh);text-align:center;width:100%}
+#head .t{font-family:Moul;font-size:clamp(14px,4.6vw,24px)}
+#head .e{font-family:'Cormorant Garamond';font-style:italic;font-size:clamp(14px,4vw,20px);color:#e7c46b}
+#tilt{perspective:1100px;margin-top:6svh}
+#float{width:min(88vw,520px,calc(62svh*1.45));aspect-ratio:1.45;position:relative}
+#float>*,#env>*{position:absolute}
+.back{inset:0;background:var(--paper2) var(--grain);border-radius:4px;z-index:0;box-shadow:0 18px 40px #000a}
+.card{left:4%;top:6%;width:92%;height:90%;z-index:2;background:var(--cream) var(--grain);display:grid;place-items:center;text-align:center;box-shadow:0 4px 14px #0006;border-radius:2px}
+.pk{inset:0;z-index:3;pointer-events:none}
+.pk i{position:absolute;inset:0;background:var(--paper) var(--grain)}
+.pk .l{clip-path:polygon(0 0,52% 56%,0 100%);background-image:linear-gradient(90deg,#0003,transparent 60%),var(--grain)}
+.pk .r{clip-path:polygon(100% 0,48% 56%,100% 100%);background-image:linear-gradient(-90deg,#0003,transparent 60%),var(--grain)}
+.pk .b{clip-path:polygon(0 100%,50% 46%,100% 100%);background-image:linear-gradient(0deg,transparent 40%,#0004),var(--grain);filter:none}
+#fshadow{left:0;right:0;top:0;height:60%;z-index:3;background:linear-gradient(#0000,#0000);}
+#flap{left:0;top:0;width:100%;height:62%;z-index:4;transform-origin:50% 0;transform-style:preserve-3d}
+#flap>div{position:absolute;inset:0;backface-visibility:hidden}
+#flap svg{width:100%;height:100%;display:block;overflow:visible;filter:drop-shadow(0 6px 5px #0007)}
+.fb{transform:rotateX(180deg)}
+.flogo{position:absolute;left:0;right:0;top:12%;display:grid;place-items:center}
+#seal{left:50%;top:60%;width:17%;aspect-ratio:1;z-index:6;translate:-50% -50%;cursor:pointer;filter:drop-shadow(0 5px 6px #0009)}
+#seal svg{width:100%;height:100%;display:block}
+#tap{position:absolute;bottom:calc(env(safe-area-inset-bottom,0px) + 6svh);font-size:14px;color:#e7c46b;animation:p 2s infinite}
+@keyframes p{50%{opacity:.35}}
+#dark{position:fixed;inset:0;background:#000;opacity:0;z-index:30;pointer-events:none}
+/* logo */
+.logo{display:inline-grid;grid-template-columns:auto auto;grid-template-rows:auto auto;gap:0 .4em;font-family:Moulpali;font-size:var(--s,22px);position:relative;align-items:center;justify-items:start}
+.logo .g{grid-area:1/1}.logo .b{grid-area:2/2;justify-self:end}
+.logo .fl{grid-area:1/1/3/3;width:100%;height:100%;position:absolute;inset:0;pointer-events:none;overflow:visible}
+.logo .h{grid-area:1/2;justify-self:end;width:.6em;color:#e7c46b;margin-top:.5em}
+.logo .bf{grid-area:2/1;width:.9em;color:#e7c46b;margin-left:.2em}
+body.en .logo{font-family:'Pinyon Script'}
+/* cover */
+#cover{position:relative;min-height:100svh;display:grid;place-items:center;text-align:center;padding:calc(env(safe-area-inset-top,0px) + 56px) 20px 28px;background:radial-gradient(ellipse at 50% 30%,#5a1a24,#14070b 75%);overflow:hidden;visibility:hidden}
+#cover:before{content:"";position:absolute;inset:0;background:var(--grain)}
+#cover>.in{position:relative;display:flex;flex-direction:column;align-items:center;gap:clamp(4px,1.4svh,14px);max-width:560px}
+.crest{width:clamp(34px,6svh,54px);color:#e7c46b}
+.sir{font-family:Moul;font-size:clamp(14px,3.6vw,22px)}
+.en-n{font-family:'Cormorant Garamond';font-style:italic;font-size:clamp(18px,3.4svh,28px)}
+.hon{font-size:clamp(13px,1.8svh,16px);color:#e7c46b}
+.row{display:flex;gap:clamp(6px,2vw,14px);align-items:stretch;border-block:1px solid #e7c46b66;padding:.4em .8em}
+.row div{padding:0 .5em;border-left:1px solid #e7c46b55;font-size:clamp(13px,1.9svh,17px)}
+.row div:first-child{border:0}.row small{display:block;font-size:.65em;color:#e7c46b}
+.row b{font-family:Moul;font-weight:400}
+.scr{font-size:12px;color:#e7c46b;margin-top:1svh}
+.scr:after{content:"";display:block;width:1px;height:26px;margin:4px auto 0;background:#e7c46b;animation:p 1.8s infinite}
+.cn{position:absolute;width:clamp(60px,16vw,110px);color:#d9b15a;opacity:.8}
+#bar{position:fixed;top:0;left:0;right:0;z-index:10;padding:calc(env(safe-area-inset-top,0px) + 8px) 14px 22px;display:flex;justify-content:space-between;align-items:center;background:linear-gradient(#000c,#0000);opacity:0;pointer-events:none}
+#lang{background:#0006;color:var(--cream);border:1px solid #e7c46b88;border-radius:99px;padding:5px 12px;font:inherit;font-size:13px;cursor:pointer}
+@media (max-height:420px){.sir{font-size:13px}.crest{display:none}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style></head><body>
+<svg width="0" height="0" style="position:absolute"><defs>
+<linearGradient id="gf" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#9c7124"/><stop offset=".4" stop-color="#fbefc0"/><stop offset=".7" stop-color="#d9b15a"/><stop offset="1" stop-color="#9c7124"/></linearGradient>
+<symbol id="crest" viewBox="0 0 60 38"><g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M30 36V12M30 36L12 14M30 36L48 14M30 36L5 24M30 36L55 24"/><path d="M4 24Q30-12 56 24"/><path d="M12 14Q30-2 48 14" opacity=".6"/></g><circle cx="30" cy="36" r="2.2" fill="currentColor"/></symbol>
+<symbol id="heart" viewBox="0 0 20 18"><path d="M10 17C-6 7 3-4 10 4c7-8 16 3 0 13z" fill="currentColor"/></symbol>
+<symbol id="bf" viewBox="0 0 40 30"><g fill="currentColor"><path d="M20 15C14 0 2-2 3 8c1 8 11 8 17 7zM20 15c6-15 18-17 17-7-1 8-11 8-17 7z" opacity=".85"/><path d="M20 15c-8 4-12 14-6 14 5 0 6-8 6-14zM20 15c8 4 12 14 6 14-5 0-6-8-6-14z" opacity=".65"/></g></symbol>
+<symbol id="cn" viewBox="0 0 100 100"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4 4H70M4 4V70"/><path d="M12 12C34 12 46 24 43 38C40 50 26 47 29 38C31 31 38 33 37 38"/><path d="M12 12C12 34 24 46 38 43" opacity=".6"/></g></symbol>
+<symbol id="lg" viewBox="0 0 90 90"><circle cx="45" cy="45" r="40" fill="url(#gf)"/><circle cx="45" cy="45" r="31" fill="none" stroke="#5a4012" stroke-opacity=".5" stroke-width="1.5"/></symbol>
+</defs></svg>
+
+<div id="bar"><span class="logo" style="--s:15px"><span class="g foil kh" data-t="g"></span><span class="b foil kh" data-t="b"></span></span><button id="lang">EN</button></div>
+
+<section id="intro">
+<div id="head"><div class="t foil kh">សិរីសួស្តីអាពាហ៍ពិពាហ៍</div><div class="e">The Wedding Invitation</div></div>
+<div id="tilt"><div id="float"><div id="env" style="position:absolute;inset:0">
+ <div class="back"></div>
+ <div class="card" id="card"><div><svg class="crest" style="display:block;margin:0 auto 8px"><use href="#crest"/></svg><span class="logo" style="--s:clamp(16px,5.4vw,28px)"><span class="g foil kh" data-t="g"></span><span class="b foil kh" data-t="b"></span><svg class="h"><use href="#heart"/></svg></span></div></div>
+ <div class="pk"><i class="l"></i><i class="r"></i><i class="b"></i></div>
+ <div id="flap"><div class="ff"><svg id="fsv" viewBox="0 0 300 150" preserveAspectRatio="none"><path id="fp" fill="var(--paper)"/><path id="fl" fill="none" stroke="url(#gf)" stroke-width="1.6"/></svg><div class="flogo"><svg style="width:12%;color:#e7c46b"><use href="#crest"/></svg><span class="logo" style="--s:clamp(11px,3.4vw,18px)"><span class="g foil kh" data-t="g"></span><span class="b foil kh" data-t="b"></span></span></div></div>
+ <div class="fb"><svg viewBox="0 0 300 150" preserveAspectRatio="none"><path id="fp2" fill="#e9dfc8"/></svg></div></div>
+ <div id="seal"><svg viewBox="0 0 90 90"><defs><filter id="sf" x="-10%" y="-10%" width="120%" height="120%"><feTurbulence type="fractalNoise" baseFrequency=".05" numOctaves="2" result="t"/><feDisplacementMap in="SourceGraphic" in2="t" scale="7" result="d"/><feSpecularLighting in="t" surfaceScale="3" specularConstant="1" specularExponent="22" lighting-color="#fff4c8" result="s"><feDistantLight azimuth="235" elevation="55"/></feSpecularLighting><feComposite in="s" in2="d" operator="in" result="sp"/><feBlend in="d" in2="sp" mode="screen"/></filter></defs><g filter="url(#sf)"><use href="#lg"/></g><use href="#crest" x="20" y="26" width="50" height="32" style="color:#6b4c14"/></svg></div>
+</div></div></div>
+<div id="tap" data-t="tap"></div>
+</section>
+<div id="dark"></div>
+
+<main id="cover"><svg class="cn" style="top:50px;left:8px"><use href="#cn"/></svg><svg class="cn" style="top:50px;right:8px"><g transform="translate(100 0) scale(-1 1)"><use href="#cn"/></g></svg><svg class="cn" style="bottom:8px;left:8px;"><g transform="translate(0 100) scale(1 -1)"><use href="#cn"/></g></svg><svg class="cn" style="bottom:8px;right:8px"><g transform="translate(100 100) scale(-1 -1)"><use href="#cn"/></g></svg>
+<div class="in">
+<svg class="crest rv"><use href="#crest"/></svg>
+<div class="sir foil kh rv" data-t="sir"></div>
+<span class="logo rv" id="lgc" style="--s:clamp(30px,8.4svh,64px)"><span class="g foil kh" data-t="g"></span><span class="b foil kh" data-t="b"></span><svg class="h"><use href="#heart"/></svg><svg class="bf" viewBox="0 0 40 30"><use href="#bf"/></svg></span>
+<div class="en-n rv">Yom Somnang &amp; Khun Narey</div>
+<div class="hon kh rv" data-t="hon"></div>
+<div class="row kh rv"><div><small data-t="l1"></small><b data-t="wd"></b></div><div><small data-t="l2"></small><b data-t="d"></b></div><div><small data-t="l3"></small><b data-t="m"></b></div><div><small data-t="l4"></small><b data-t="y"></b></div></div>
+<div class="scr kh rv" data-t="scr"></div>
+</div></main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script>
+const $=s=>document.querySelector(s),T={
+kh:{g:"សំណាង",b:"នារី",tap:"ប៉ះត្រារក្សាទុកដើម្បីបើក",sir:"សិរីសួស្តីអាពាហ៍ពិពាហ៍",hon:"សូមគោរពអញ្ជើញ",l1:"ថ្ងៃ",l2:"ទី",l3:"ខែ",l4:"ឆ្នាំ",wd:"អង្គារ",d:"៣០",m:"មករា",y:"២០៥០",scr:"រំកិលចុះ"},
+en:{g:"Somnang",b:"Narey",tap:"Tap the seal to open",sir:"The Wedding Invitation",hon:"Together with our families, you are invited",l1:"Day",l2:"Date",l3:"Month",l4:"Year",wd:"Tue",d:"30",m:"Jan",y:"2050",scr:"Scroll"}};
+function setL(l){document.documentElement.lang=l=='kh'?'km':'en';document.body.classList.toggle('en',l=='en');
+document.querySelectorAll('[data-t]').forEach(e=>e.textContent=T[l][e.dataset.t]);$('#lang').textContent=l=='kh'?'EN':'ខ្មែរ';$('#lang').dataset.l=l}
+$('#lang').onclick=()=>setL($('#lang').dataset.l=='kh'?'en':'kh');setL('kh');
+// scalloped flap path
+function flap(){const n=9,p=[];for(let i=0;i<=n;i++)p.push([i/n*150,30+i/n*115]);
+let d='M0 0H300V30';const R=[...p].reverse().map(([x,y])=>[300-x,y]);
+const pts=[...R,...p.slice(1).map(([x,y])=>[x,y])].filter((_,i,a)=>true);
+// right edge descends to tip, then left edge ascends
+const right=p.map(([x,y])=>[300-x,y]),left=[...p].reverse();
+const seq=[...right,...left.slice(1)];
+for(let i=1;i<seq.length;i++)d+=`A9 9 0 0 1 ${seq[i][0]} ${seq[i][1]}`;
+return d+'L0 30Z'}
+const fd=flap();$('#fp').setAttribute('d',fd);$('#fp2').setAttribute('d',fd);$('#fl').setAttribute('d',fd);
+gsap.set('#flap',{transformPerspective:1100});
+const rm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+const idle=gsap.to('#float',{y:-8,rotation:.7,duration:3,yoyo:true,repeat:-1,ease:'sine.inOut'});
+addEventListener('pointermove',e=>{if(opened)return;gsap.to('#tilt',{rotationY:(e.clientX/innerWidth-.5)*8,rotationX:-(e.clientY/innerHeight-.5)*6,duration:1.2})});
+let opened=0;
+function cover(){gsap.set('#intro',{display:'none'});$('#cover').style.visibility='visible';
+const cl=[-40,110,-40,-10],tl=gsap.timeline({defaults:{ease:'power3.out'}});
+gsap.to('#bar',{opacity:1,pointerEvents:'auto',duration:1,delay:.8});
+tl.from('.rv:not(.sir):not(#lgc)',{y:18,opacity:0,duration:1,stagger:.15},.2)
+.fromTo('.sir,#lgc .g,#lgc .b',{clipPath:'inset(-40% 110% -40% -10%)'},{clipPath:'inset(-40% -10% -40% -10%)',duration:1.4,stagger:.25,ease:'power2.inOut',clearProps:'clipPath'},.3)
+.from('#lgc .h',{scale:0,duration:.6,ease:'back.out(3)'},1.3).from('#lgc .bf',{x:-80,y:30,opacity:0,rotation:-25,duration:1.4},1.2);
+gsap.to('#lgc .foil',{backgroundPosition:'100% 0',duration:3.5,repeat:-1,yoyo:true,ease:'sine.inOut'})}
+function open(){if(opened)return;opened=1;idle.kill();$('#tap').style.display='none';
+gsap.to('#tilt',{rotationX:0,rotationY:0,duration:.6});
+if(rm){gsap.to('#dark',{opacity:1,duration:.4,onComplete:()=>{cover();gsap.to('#dark',{opacity:0,duration:.6})}});return}
+const t=gsap.timeline({defaults:{ease:'power2.inOut'}});
+t.to('#seal',{scale:.92,duration:.4})                       // press
+.to('#seal',{scale:1.18,y:-22,filter:'drop-shadow(0 26px 18px #000b)',duration:.8},.5)  // lift
+.to('#seal',{x:'260%',y:'-120%',rotation:40,opacity:0,duration:.9},1.3)  // set aside
+.to('#flap',{rotationX:-180,duration:1.3,ease:'power1.inOut'},1.9)
+.set('#flap',{zIndex:1},2.55)
+.to('#card',{y:'-58%',rotation:-2.5,duration:1.2,ease:'power2.out'},3.1)
+.to('#env>*:not(#card),#float',{},3.1)
+.to('#env>.back,.pk,#flap',{y:'+=70',duration:1,},3.9)
+.to('#env>.back,.pk,#flap',{y:'+=900',opacity:0,duration:.9,ease:'power2.in'},4.2)
+.to('#card',{y:'-8%',rotation:0,scale:1.9,duration:1,ease:'power2.inOut'},4.2)
+.to('#dark',{opacity:1,duration:.7,ease:'none'},4.8)
+.add(cover,5.5).to('#dark',{opacity:0,duration:.9,ease:'none'},5.5)}
+$('#seal').onclick=open;$('#float').onclick=open;
+</script></body></html>
